@@ -1,0 +1,261 @@
+/*===================Header=====================*/
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    width: 100vw;
+    /* Ensure the header takes full viewport width */
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    min-width: 1100px;
+    height: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    /* Increase the logo size for better visibility */
+}
+
+/*===================Navigation bar=====================*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    height: 80px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.navbar ul li {
+    margin: 0 15px;  /* Adjusted margin */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    white-space: nowrap; /* Prevent links from wrapping */
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+
+
+/*===================User Info / Login/Logout Section=====================*/
+.user-info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: 40px;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.user-info>div {
+    margin: 0px 20px;
+}
+
+.username {
+    margin: 0 10px;
+    font-size: 1rem;
+    color: black;
+    white-space: nowrap;
+}
+
+/*===================Cart and Logout Section=====================*/
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.cart-item a {
+    margin-right: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.cart-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+/*===================Login, Register, Logout Buttons=====================*/
+.login-icon,
+.register-icon,
+.logout-icon {
+    color: #fff;
+    text-decoration: none;
+    background-color: #6772e5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 30px;
+}
+
+.login-icon:hover,
+.register-icon:hover,
+.logout-icon:hover {
+    background-color: #6772e5;
+}
+
+/*===================Notification Icon=====================*/
+.alert-icon i {
+    color: black;
+    font-size: 26px;
+}
+
+.alert-icon {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/*===================Dropdown=====================*/
+.alert-dropdown {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.alert-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.alert-dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+}
+
+.alert-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.alert-dropdown ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.alert-dropdown ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/*===================Footer=====================*/
+.footer {
+    background-color: #343a40;
+    padding: 15px 0px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    border-top: 1px solid #495057;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    /* Add some space between content and footer */
+    box-sizing: border-box;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Ensure the main content doesn't overlap with the footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 0px;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    overflow-x: hidden;
+}
+
+/*===================Responsive Adjustments=====================*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .user-info {
+        flex-direction: column;
+        margin: 15px 0;
+    }
+}
+
+/* Ensure content doesn't overflow */
+html,
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
